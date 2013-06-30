@@ -4,3 +4,6 @@
 [submodule "lib/prism"]
 	path = lib/prism
 	url = https://github.com/LeaVerou/prism.git
+[submodule "lib/prism-langs"]
+	path = lib/prism-langs
+	url = https://github.com/samflores/prism-langs.git
