@@ -1,3 +1,6 @@
 [submodule "_plugins/jekyll-prism-plugin"]
 	path = _plugins/jekyll-prism-plugin
 	url = https://github.com/gmurphey/jekyll-prism-plugin.git
+[submodule "lib/prism"]
+	path = lib/prism
+	url = https://github.com/LeaVerou/prism.git
