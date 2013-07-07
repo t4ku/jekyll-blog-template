@@ -1,46 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+  <head>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/normalize.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css"
+    media="all" />
 
-        <link rel="stylesheet" href="/css/main.css" />
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/lib/prism/prism-twilight.css" />
+    <!-- syntax highlight -->
+    <link rel="stylesheet" href="/lib/prism/prism-twilight.css" />
+    {% if site.feedburner %}
+    <link href="http://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
+    {% endif %}
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% if site.google_analytics %}
+    <!-- google analytics async -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{{ site.google_analytics.account }}']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    {% endif %}
+  </head>
+  <body>
+       <div id="header">
+         <div id="header-item-area">
+          <div id="logo-area"><a href="/">WYSAWYG</a></div>
+          <nav>
+          <ul id="menu" class="clearfix">
+              <li><a href="/">home</a></li>
+              <li><a href="https://twitter.com/#!/t4ku">twitter</a></li>
+              <li><a href="http://t4ku.tumblr.com/">tumblr</a></li>
+              <li><a href="http://www.facebook.com/t4ku.o">facebook</a></li>
+              <li><a href="http://github.com/t4ku">github</a></li>
+            </ul>
+          </nav>
+         </div>
+      </div>
+        {{ content }}
 
-    </head>
-    <body>
+  {% if site.github %}
+    <a href="http://github.com/{{ site.github.username }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+  {% endif %}
+      <div id="credit">
+        <div id="footer-center">
+          <span>© 2012 Taku Okawa</span><br />
+          <span>Hosted on Heroku and Powered by <a href="https://github.com/mojombo/jekyll">jekyll</a></span>
+        </div>
+      </div>
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
-
-                {{ content }}
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-
-        <script src="/lib/prism/prism.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/lib/prism-langs/prism.ruby.js" type="text/javascript" charset="utf-8"></script>
-    </body>
+      <!-- syntax highlight -->
+      <script src="/lib/prism/prism.js" type="text/javascript" charset="utf-8"></script>
+      <script src="/lib/prism-langs/prism.ruby.js" type="text/javascript" charset="utf-8"></script>
+      <script src="/js/prism.php.js" type="text/javascript" charset="utf-8"></script>
+  </body>
 </html>

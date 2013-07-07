@@ -1,0 +1,243 @@
+@import "compass";
+
+html{
+	font-size: 100%;
+}
+
+$light-grey: #f2f2f2;
+$slightly-grey: #efefef;
+$base-grey:#c5c7B6;
+$medium-grey: #6e6e6e;
+$dark-blue: #2f3837;
+$dark-purple: #222028;
+$dark-brown-grey: #4c493e;
+$wine-red:#980905;
+$dark-grey:#3e3e3e;
+
+body{
+  background-image:url('../images/ptn10_01.png');
+	/*font-size:0.9em;*/
+  /*font-family:monaco;*/
+  font-family:'ヒラギノ角ゴ Pro W4', 'Hiragiu Kaku Gothic Pro','Verdana','メイリオ',Meiryo,'ＭＳ Ｐゴシック', sans-serif;
+	text-align:center;
+	margin:0px;
+}
+
+h1{
+	font-size:1.4em;
+}
+
+h2{
+	font-size:1.2em;
+}
+
+h3{
+	font-size:1.0em;
+}
+
+.clearfix {width:100%;}
+.clearfix:after{
+    content: ""; 
+    display: block; 
+    clear: both;
+}
+
+#header{
+   border-top: 4px solid $dark-blue;
+  #header-item-area{
+    width:760px;
+    margin:auto;
+
+    a{
+      color:$dark-blue;
+      text-decoration:none;
+    }
+    /*@include background(*/
+    /*linear-gradient($light-grey,$dark-grey));*/
+    #logo-area{
+      font-family:Calibri,"Gill Sans","Gill Sans MT","Myriad Pro",Myriad,"DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,"MS PGothic",Osaka,Sans-Serif;
+      text-align:left;
+      font-size:42px;
+      line-height:52px;
+      // todo 
+      text-shadow:#ddd 1px 1px 0px, #999 0px 0px 10px, #999 0px 0px 10px;
+    }
+    margin-top:2em;
+    
+    nav ul#menu {
+      font-family:Sans-Serif;
+      font-size:1.8em;
+      list-style:none;
+      padding:0px;
+      margin-top:0.6em;
+      margin-bottom:2em;
+
+      li {
+        display:inline;
+        padding-right:1em;
+        float:left;
+        font-size: 0.6em;
+      }
+    }
+  }
+}
+
+#wrapper{	
+    margin : 2em auto;
+		text-align:left;
+		width:760px;
+	a{
+		color:#2f3837;
+		text-decoration:none;
+	}
+	
+	
+	#content{
+    /*color:$medium-grey;*/
+    color:$dark-grey;
+
+		a{
+			/*color:$wine-red;*/
+			text-decoration:none;
+		}
+    
+    #posts {
+      ul{
+        list-style:none;
+      }
+      .postdate{
+        color:$base-grey;
+        font-family:monaco,monospace;
+      }
+    }
+
+    #pages {
+      ul{
+        list-style:none;
+      }
+    }
+    
+    .post {
+        h1 {
+          margin-bottom: 6px;
+        }
+        a {
+          text-decoration:underline;
+        }
+        
+      .post-title{
+        .postdate {
+          color:$wine-red;
+          margin-bottom:2em;
+        }
+      }
+      .post-body{
+        h1 {
+        }
+        h2 {
+          padding-left: 10px;
+          border-left: solid $base-grey 8px;
+        }
+        
+        table {
+            width: 80%;
+            background: white;
+
+          td,th{
+            font-weight:normal;		
+            padding:5px;
+            border:1px solid $base-grey;
+            border-width:1px;}
+
+          th{
+            background:$light-grey;
+          }
+
+          td{
+            /* background:#EEE; */
+          }
+        }
+
+        pre {
+            word-break: keep-all;
+            word-wrap:  normal;
+        }
+
+      }
+    }
+
+     #comments{
+       border-top:1px dotted $dark-brown-grey;
+       margin-top:4em;
+     }
+		table.dbtable{
+				width:600px;
+				font-size:0.8em;
+
+			td,th{
+				font-weight:normal;		
+				padding:5px;
+				border:1px solid #fff;
+				border-width:0 1px 1px 0;}
+
+			th{
+				background:#DDD;
+			}
+
+			td{
+				background:#EEE;
+			}
+		}
+
+		.code{
+			padding:4px;
+			color:#EEE;
+			background:#111;
+		}
+	
+	}
+}
+#post-footer{
+  padding:12px;
+  background-color:$dark-blue;
+  /*background-color:$dark-brown-grey;*/
+  /*background-image:url('../images/ptn10_01.png');*/
+  color:$base-grey;
+  a{
+    color:$base-grey;
+    text-decoration:none;
+  }
+  h1{
+    color:$medium-grey;
+    font-weight:normal;
+  }
+  h2{
+    margin:0.4em 0;
+    color:$medium-grey;
+    font-weight:normal;
+  }
+  #related{
+    text-align:left;
+		ul{
+      margin:0;
+      padding:0;
+			list-style:none;
+		}
+    width:760px;
+    margin:auto;
+  }
+}
+#credit{
+  padding:6px;
+  font-size:0.8em;
+  #footer-center{
+    width:760px;
+    margin:auto;
+    text-align:right;
+  }
+  background-color:#1e1e1e;
+  color:$medium-grey;
+  a{
+    color:$medium-grey;
+  }
+}
