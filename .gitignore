@@ -1,2 +1,11 @@
 _site
 _sass/.sass-cache
+
+# sass output dir
+css/*
+css/!normalize.css
+
+img/*
+
+js/*
+js/!prism.php.js
