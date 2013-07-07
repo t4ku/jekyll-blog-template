@@ -24,3 +24,11 @@ Usage
 ```
 jekyll serve
 ```
+
+Deploying to Heroku
+-------------------
+
+```
+heroku config:add BUILD_PACK=https://github.com/t4ku/heroku-buildpack-ruby-jekyll.git
+```
+
