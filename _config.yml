@@ -1,3 +1,32 @@
-name: Your New Jekyll Site
-markdown: rdiscount
+# standard jekyll configuration
+
+permalink: date
 pygments: false
+markdown: rdiscount
+exclude: ['Gemfile', 'Gemfile.lock',
+          'Rakefile', 'README.md', 'config.rb',
+          'vendor', 'bundler' , 'Guardfile' ]
+
+# configuration required for some pages
+
+domain: blog.showqase.com
+title: wysawyg
+author: Me
+email: taku.okawa@gmail.com
+
+# configuration for ehancements, uncomment to enable
+
+rdiscount:
+  extensions: []
+
+# feedburner:
+#   id: feedburnerid
+
+google_analytics:
+  account: UA-1369852-4
+
+# github:
+#   username: ghusername
+
+disqus:
+  id: wysawyg
